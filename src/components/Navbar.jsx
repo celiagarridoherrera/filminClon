@@ -3,9 +3,9 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <div style={styles.logo}>MiLogo</div>
+      <div style={styles.logo}><img src="./src/img/logo.png" alt="logo filmin" /></div>
       <ul style={styles.navLinks}>
-        <li><a href="/" style={styles.link}>Inicio</a></li>
+        
         <li><a href="/about" style={styles.link}>Cine</a></li>
         <li><a href="/contact" style={styles.link}>Series</a></li>
       </ul>
@@ -20,14 +20,14 @@ const styles = {
     top: 0,
     left: 0,
     width: "100%", // Ocupa todo el ancho
-    backgroundColor: "#333", // Color de fondo
+    backgroundColor: "#060613", // Color de fondo
     color: "#fff", // Color del texto
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
     padding: "10px 20px",
     zIndex: 1000, // Asegura que esté por encima de otros elementos
-    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)", // Sombras para darle efecto
+   
   },
   logo: {
     fontSize: "1.5rem",
