@@ -2,8 +2,7 @@ import './App.css'
 import { fetchData} from './api';
 import { useState, useEffect } from 'react';
 
-
-
+import { CategoryCarousel } from './components/Categories/Categories';
 function App() {
   
   const [movies, setMovies] = useState({});
@@ -41,7 +40,7 @@ function App() {
 
   return (
     <>
-
+    <CategoryCarousel movies={movies}></CategoryCarousel>
     </>
   )
 }
