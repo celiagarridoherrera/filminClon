@@ -41,6 +41,9 @@ function App() {
   return (
     <>
     <CategoryCarousel movies={movies}></CategoryCarousel>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
     </>
   )
 }
