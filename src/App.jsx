@@ -1,15 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-
-const App = () => {
 import './App.css'
 import { fetchData} from './api';
 import { useState, useEffect } from 'react';
-
 import { CategoryCarousel } from './components/Categories/Categories';
+
+
 function App() {
   
+  const App = () => {
   const [movies, setMovies] = useState({});
   const page = 6;
 
@@ -47,7 +47,7 @@ function App() {
     <>
     
     </>
-  )
+  )}
 }
+  export default App;
 
-export default App;
