@@ -4,17 +4,34 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 export const CategoryCarousel = ({ movies }) => {
   const containerRef = useRef(null);
+  const results = movies.results || [];
 
   const scroll = (direction) => {
     const { current } = containerRef;
     if (current) {
-      const scrollAmount = direction === "left" ? -300 : 300;
+      const scrollAmount = direction === "left" ? -500 : 500;
       current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
 
   return (
     <Box sx={{ position: "relative", width: "100%", overflow: "hidden" }}>
+      <Typography
+        variant="h4"
+        sx={{
+          marginBottom: 2,
+          marginLeft: 2,
+          marginTop: 2,
+          fontWeight: "bold",
+          color: "#FFFFFF",
+          letterSpacing: "1px",
+          textAlign: "left",
+          fontSize: "24px",
+          letterSpacing: "2px",
+        }}
+      >
+        titulo
+        </Typography>
       {/* flecha izq */}
       <IconButton
         onClick={() => scroll("left")}
@@ -52,14 +69,20 @@ export const CategoryCarousel = ({ movies }) => {
           scrollbarWidth: "none", // Oculta la barra en Firefox
         }}
       >
-        {movies.map((movie, index) => (
-          <Card key={index} sx={{ 
+        {results.map((item, index) => (
+          <Card key={index} 
+          sx={{ 
             minWidth: 200,
             minHeight: 300,
+            position: "relative",
+            backgroundImage: `url(https://image.tmdb.org/t/p/w500${item.poster_path})`,
+            backgroundSize: "cover",
             }}>
             <CardContent>
               <Typography variant="h6"
               sx={{
+                position: "absolute",
+                bottom: 0,
                 backgroundColor: "rgba(0, 0, 0, 0.35)",
                 color: "white",
                 padding: "10px 20px", 
@@ -69,7 +92,7 @@ export const CategoryCarousel = ({ movies }) => {
                 marginRight: "20px",
                 letterSpacing: "1px",
               }}>
-                {movie.title}</Typography>
+                {item.title}</Typography>
             </CardContent>
           </Card>
         ))}
