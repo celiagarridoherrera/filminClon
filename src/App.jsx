@@ -5,10 +5,12 @@ import Navbar from "./components/Navbar.jsx";
 import './App.css'
 import { fetchData} from './api';
 import { useState, useEffect } from 'react';
+import Footer from './components/Footer/Footer'
+
 import { CategoryCarousel } from './components/Categories/Categories';
 
 function App() {
-  
+
   const [movies, setMovies] = useState({});
   const page = 6;
 
@@ -51,6 +53,7 @@ return (
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <CategoryCarousel movies={movies}></CategoryCarousel>
+    <Footer></Footer>
     </>
   )
 }
