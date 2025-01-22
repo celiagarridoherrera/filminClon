@@ -45,6 +45,7 @@ function App() {
   }, [page])
 
 return (
+  <>
     <Slider/>
 
    <Router>
@@ -55,6 +56,7 @@ return (
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <Footer></Footer>
+    </>
   );
 }
 
