@@ -1,11 +1,10 @@
 
 import './App.css';
-import SeriesPage from './components/Seriespage';
-import FilmsPage from './components/FilmsPage';
+import SeriesPage from './components/Series/Seriespage.jsx';
+import FilmsPage from './components/Films/Filmspage.jsx';
 import './components/styles.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-
 import './App.css'
 import { fetchData} from './api';
 import { useState, useEffect } from 'react';
@@ -53,6 +52,8 @@ return (
    <Router>
       <Navbar />
     </Router>
+    <SeriesPage></SeriesPage>
+    <FilmsPage></FilmsPage>
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <CategoryCarousel movies={movies}></CategoryCarousel>
