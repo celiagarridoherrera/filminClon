@@ -1,4 +1,8 @@
-import React from "react";
+
+import './App.css';
+import SeriesPage from './components/Seriespage';
+import FilmsPage from './components/FilmsPage';
+import './components/styles.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 
@@ -55,7 +59,7 @@ return (
     <CategoryCarousel movies={movies}></CategoryCarousel>
     <Footer></Footer>
     </>
-  )
+  );
 }
 
 export default App;
