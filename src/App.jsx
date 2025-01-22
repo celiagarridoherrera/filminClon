@@ -1,8 +1,17 @@
+
+import './App.css';
+import SeriesPage from './components/Seriespage';
+import FilmsPage from './components/FilmsPage';
+import './components/styles.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+
 import './App.css'
 import { fetchData } from './api';
 import { useState, useEffect } from 'react';
-import Slider from './Components/Slider/Slider';
+import Slider from './Components/Slider/Slider';import Footer from './components/Footer/Footer'
 
+import { CategoryCarousel } from './components/Categories/Categories';
 
 function App() {
 
@@ -35,11 +44,18 @@ function App() {
     fetchMovies();
   }, [page])
 
-  return (
+return (
     <Slider/>
 
-
-  )
+   <Router>
+      <Navbar />
+    </Router>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
+    <CategoryCarousel movies={movies}></CategoryCarousel>
+    <Footer></Footer>
+  );
 }
 
-export default App
+export default App;
