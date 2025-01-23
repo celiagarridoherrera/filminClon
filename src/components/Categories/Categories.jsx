@@ -1,10 +1,12 @@
 import React, { useRef } from "react";
 import { Box, Grid, IconButton, Card, CardContent, Typography } from "@mui/material";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import {useMovies} from "../../hooks/useMovies"
 
-export const CategoryCarousel = ({ movies }) => {
+export const CategoryCarousel = ( props ) => {
   const containerRef = useRef(null);
-  const results = movies.results || [];
+  
+  const results = useMovies(props.page)
 
   const scroll = (direction) => {
     const { current } = containerRef;
