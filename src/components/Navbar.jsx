@@ -1,15 +1,17 @@
 
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}><img style={styles.logoImg} src="/images/logo.png" alt="logo filmin" /></div>
       <ul style={styles.navLinks}>
         
-        <li><a href="/about" style={styles.link}>Cine</a></li>
-        <li><a href="/contact" style={styles.link}>Series</a></li>
+        <li><Link to={"/cine"} style={styles.link}>Cine</Link></li>
+        <li>< Link to={"/series"}  style={styles.link}>Series</Link></li>
       </ul>
     </nav>
+
+  
   );
 };
 
@@ -47,5 +49,11 @@ const styles = {
     fontSize: "1rem",
   },
 };
+
+
+
+ 
+
+
 
 export default Navbar;
