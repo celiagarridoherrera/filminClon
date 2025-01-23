@@ -1,9 +1,9 @@
-import React from "react";
+
 
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <div style={styles.logo}><img style={styles.logoImg} src="./src/img/logo.png" alt="logo filmin" /></div>
+      <div style={styles.logo}><img style={styles.logoImg} src="/images/logo.png" alt="logo filmin" /></div>
       <ul style={styles.navLinks}>
         
         <li><a href="/about" style={styles.link}>Cine</a></li>
