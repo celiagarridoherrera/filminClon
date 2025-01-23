@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
@@ -13,6 +13,8 @@ const Navbar = () => {
         <li><Link to="/series" style={styles.link}>Series</Link></li>
       </ul>
     </nav>
+
+  
   );
 };
 
@@ -52,5 +54,11 @@ const styles = {
     fontSize: "16px",
   },
 };
+
+
+
+ 
+
+
 
 export default Navbar;
