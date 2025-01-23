@@ -1,62 +1,31 @@
 
 import './App.css';
-import SeriesPage from './components/Seriespage';
-import FilmsPage from './components/FilmsPage';
+import SeriesPage from './components/Series/Seriespage.jsx';
+import FilmsPage from './components/Films/Filmspage.jsx';
 import './components/styles.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
-
 import './App.css'
-import { fetchData } from './api';
-import { useState, useEffect } from 'react';
-import  Slider  from './components/Slider/Slider'; import Footer from './components/Footer/Footer'
+import  Slider  from './components/Slider/Slider'; 
+import Footer from './components/Footer/Footer'
+
 
 import { CategoryCarousel } from './components/Categories/Categories';
 
 function App() {
 
-  const [movies, setMovies] = useState({});
-  const page = 6;
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-
-      const storedMovies = localStorage.getItem(`movies_page_${page}`)
-      console.log(storedMovies)
-
-      if (!storedMovies) {
-        try {
-          const resultado = await fetchData(page);
-          localStorage.setItem(`movies_page_${page}`, JSON.stringify(resultado));
-          console.log("Datos obtenidos en el localStorage:", resultado)
-          setMovies(resultado)
-        } catch (error) {
-          console.error(`Error al conectar a la API: ${error}`)
-          alert("Intente de nuevo más tarde");
-        }
-      } else {
-        setMovies(JSON.parse(storedMovies))
-        console.log("Ya hay datos en el localStorage para la página:", page);
-        console.log(JSON.parse(storedMovies));
-      }
-
-    }
-    fetchMovies();
-  }, [page])
-
   return (
-    <>
-      <Router>
-        <Navbar />
-      </Router>
-      <Slider movies={movies}></Slider>
-      <CategoryCarousel movies={movies}></CategoryCarousel>
-      <CategoryCarousel movies={movies}></CategoryCarousel>
-      <CategoryCarousel movies={movies}></CategoryCarousel>
-      <CategoryCarousel movies={movies}></CategoryCarousel>
-      <Footer></Footer>
-    </>
-  );
+      <>
+        <Router>
+          <Navbar />
+        </Router>
+        <Slider movies={movies}></Slider>
+        <SeriesPage></SeriesPage>
+        <FilmsPage></FilmsPage>
+        <CategoryCarousel page={1} ></CategoryCarousel>
+        <Footer></Footer>
+      </>
+    );
 }
 
 export default App;
