@@ -6,13 +6,13 @@ import { CategoryCarousel } from "./components/Categories/Categories";
 import FilmsPage from "./components/Films/Filmspage";
 import SeriesPage from "./components/Series/Seriespage";
 import Footer from "./components/Footer/Footer";
+import './components/stylespage.css';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        {/* Página principal */}
         <Route 
           path="/" 
           element={
@@ -22,12 +22,10 @@ function App() {
             </>
           } 
         />
-        {/* Página de Cine */}
         <Route path="/films" element={<FilmsPage />} />
-        {/* Página de Series */}
         <Route path="/series" element={<SeriesPage />} />
       </Routes>
-      <Footer />
+      <Footer/>
     </Router>
   );
 }

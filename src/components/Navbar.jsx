@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>
-        <img style={styles.logoImg} src="./src/img/logo.png" alt="logo filmin" />
+      <Link to="/">
+          <img style={styles.logoImg} src="./src/img/logo.png" alt="logo filmin" />
+        </Link>
         </div>
       <ul style={styles.navLinks}>
         
