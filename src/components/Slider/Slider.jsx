@@ -3,10 +3,11 @@ import { Box, IconButton, Card, CardContent, Typography } from "@mui/material";
 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import { useMovies } from "../../hooks/useMovies";
 
-const Slider = ({ movies }) => {
+const Slider = (props) => {
     const containerRef = useRef(null);
-    const results = movies.results || [];
+    const results = useMovies(props.page);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const totalPages = results.length; // Cada Card es una página
@@ -95,8 +96,9 @@ const Slider = ({ movies }) => {
                         key={index}
                         sx={{
                             minWidth: "100%",
-                            minHeight: "20vh",
+                            minHeight: "100vh",
                             position: "relative",
+                            top: 0,
                             flex: "0 0 100%",
                             display: "flex",
                             justifyContent: "center",
