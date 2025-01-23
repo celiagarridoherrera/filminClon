@@ -1,13 +1,18 @@
+import React from "react";
 
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav style={styles.navbar}>
-      <div style={styles.logo}><img style={styles.logoImg} src="/images/logo.png" alt="logo filmin" /></div>
+      <div style={styles.logo}>
+      <Link to="/">
+          <img style={styles.logoImg} src="/images/logo.png" alt="logo filmin" />
+        </Link>
+        </div>
       <ul style={styles.navLinks}>
         
-        <li><Link to={"/cine"} style={styles.link}>Cine</Link></li>
-        <li>< Link to={"/series"}  style={styles.link}>Series</Link></li>
+        <li><Link to="/films" style={styles.link}>Cine</Link></li>
+        <li><Link to="/series" style={styles.link}>Series</Link></li>
       </ul>
     </nav>
 
@@ -47,6 +52,8 @@ const styles = {
     color: "#fff",
     textDecoration: "none",
     fontSize: "1rem",
+    marginLeft: "20px",
+    fontSize: "16px",
   },
 };
 

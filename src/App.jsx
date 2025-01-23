@@ -1,29 +1,34 @@
-
-import './App.css';
-import SeriesPage from './components/Series/Seriespage.jsx';
-import FilmsPage from './components/Films/Filmspage.jsx';
-import './components/styles.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import './App.css'
-import  Slider  from './components/Slider/Slider'; 
-import Footer from './components/Footer/Footer'
-
-
-import { CategoryCarousel } from './components/Categories/Categories';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Slider from "./components/Slider/Slider";
+import { CategoryCarousel } from "./components/Categories/Categories";
+import FilmsPage from "./components/Films/Filmspage";
+import SeriesPage from "./components/Series/Seriespage";
+import Footer from "./components/Footer/Footer";
+import './components/stylespage.css';
 
 function App() {
-
   return (
-      <>
-        <Router>
-          <Navbar />
-        </Router>
-        <Slider page={1}></Slider>
-        <CategoryCarousel page={1} ></CategoryCarousel>
-        <Footer></Footer>
-      </>
-    );
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route 
+          path="/" 
+          element={
+            <>
+              <Slider page={1} />
+              <CategoryCarousel page={1} />
+            </>
+          } 
+        />
+        <Route path="/films" element={<FilmsPage />} />
+        <Route path="/series" element={<SeriesPage />} />
+      </Routes>
+      <Footer/>
+    </Router>
+  );
 }
 
 export default App;
+
