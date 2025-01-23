@@ -19,9 +19,7 @@ function App() {
         <Router>
           <Navbar />
         </Router>
-        <Slider movies={movies}></Slider>
-        <SeriesPage></SeriesPage>
-        <FilmsPage></FilmsPage>
+        <Slider page={1}></Slider>
         <CategoryCarousel page={1} ></CategoryCarousel>
         <Footer></Footer>
       </>
