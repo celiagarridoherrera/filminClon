@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchMovies } from "../services/fetchMovies";
+import { fetchData } from "../services/fetchData";
 
 export const useMovies = (page) => {
 
@@ -9,7 +9,7 @@ export const useMovies = (page) => {
 
         const loadMovies = async () => {
             
-            const response = await fetchMovies(page);
+            const response = await fetchData(page);
             setMovies(response.results || []);
         };
 

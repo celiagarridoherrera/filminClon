@@ -8,8 +8,7 @@ export async function fetchData(page)
     {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`Error de red: ${response.status}`);
-        const json = await response.json();
-        return json;
+        return await response.json();
         
     } catch (error)
     {
