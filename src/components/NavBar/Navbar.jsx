@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
@@ -53,7 +51,6 @@ const styles = {
     textDecoration: "none",
     fontSize: "1rem",
     marginLeft: "20px",
-    fontSize: "16px",
   },
 };
 

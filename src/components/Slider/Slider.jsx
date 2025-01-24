@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Box, IconButton, Card, CardContent, Typography } from "@mui/material";
 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';

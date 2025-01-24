@@ -1,25 +1,20 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Slider from "./components/Slider/Slider";
-import { CategoryCarousel } from "./components/Categories/Categories";
+import Navbar from "./components/NavBar/Navbar";
 import FilmsPage from "./components/Films/Filmspage";
 import SeriesPage from "./components/Series/Seriespage";
 import Footer from "./components/Footer/Footer";
 import './components/stylespage.css';
+import { HomePage } from "./components/HomePage/HomePage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/filminClon">
       <Navbar />
       <Routes>
         <Route 
           path="/" 
           element={
-            <>
-              <Slider page={1} />
-              <CategoryCarousel page={1} />
-            </>
+            <HomePage />
           } 
         />
         <Route path="/films" element={<FilmsPage />} />
