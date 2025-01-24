@@ -1,5 +1,3 @@
-import React from "react";
-
 function SeriesPage() {
   return (
     <div className="sf-page">

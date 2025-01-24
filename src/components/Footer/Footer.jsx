@@ -1,23 +1,23 @@
-import React from "react";
+
 import "./styles.css"
  function Footer() {
   return (
 
     
 
- <footer class="footer">
+ <footer className="footer">
   
-  <div class="footer-container">
+  <div className="footer-container">
 
-  <div class= "footer-left"> 
+  <div className= "footer-left"> 
 
-    <span class="left"><p>@copyright creado por StreamTeam</p></span>
+    <span className="left"><p>@copyright creado por StreamTeam</p></span>
 
   </div>
 
-  <div class= "footer-right">
+  <div className= "footer-right">
 
-    <span class="right">
+    <span className="right">
 
       <a href="https://github.com/lgtf5" target="_blank">Lidia 🎞️</a>
       <a href="https://github.com/joseRD149" target="_blank">Jose 🎟️️</a>

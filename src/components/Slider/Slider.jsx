@@ -10,7 +10,7 @@ const Slider = (props) => {
     const results = useMovies(props.page);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const totalPages = results.length; // Cada Card es una página
+    const totalPages = results.length;
 
     const scrollToIndex = (index) => {
         const { current } = containerRef;
@@ -32,13 +32,11 @@ const Slider = (props) => {
     };
 
     useEffect(() => {
-        // Sincroniza el índice actual si cambia el tamaño del contenedor o los datos
         scrollToIndex(currentIndex);
     }, [currentIndex]);
 
     return (
         <Box sx={{ position: "relative", width: "100%", overflow: "hidden" }}>
-            {/* Título */}
             <Typography
                 variant="h4"
                 sx={{
@@ -55,7 +53,6 @@ const Slider = (props) => {
                 Titulo
             </Typography>
 
-            {/* Flecha izquierda */}
             {currentIndex > 0 && (
                 <IconButton
                     onClick={() => scroll("left")}
@@ -78,7 +75,6 @@ const Slider = (props) => {
                 </IconButton>
             )}
 
-            {/* Contenedor */}
             <Box
                 ref={containerRef}
                 sx={{
@@ -145,7 +141,6 @@ const Slider = (props) => {
                 ))}
             </Box>
 
-            {/* Flecha derecha */}
             {currentIndex < totalPages - 1 && (
                 <IconButton
                     onClick={() => scroll("right")}
@@ -167,7 +162,6 @@ const Slider = (props) => {
                 </IconButton>
             )}
 
-            {/* Indicadores (Dots) */}
             <Box
                 sx={{
                     top: "90%",
