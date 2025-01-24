@@ -1,8 +1,12 @@
 #root {
+  
   min-width: 50vw;
   margin: 0 auto;
   padding: 4.5rem;
+  padding-bottom: 2rem;
   text-align: center;
+  background-color: #060613;
+
 }
 
 .logo:hover {
