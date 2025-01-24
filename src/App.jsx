@@ -11,19 +11,14 @@ function App() {
     <Router basename="/filminClon">
       <Navbar />
       <Routes>
-        <Route 
-          path="/" 
-          element={
-            <HomePage />
-          } 
-        />
+        <Route path="/" element={<HomePage />} />
         <Route path="/films" element={<FilmsPage />} />
         <Route path="/series" element={<SeriesPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
-}
+};
 
 export default App;
 
