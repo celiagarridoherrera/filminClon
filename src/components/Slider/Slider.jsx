@@ -38,7 +38,6 @@ const Slider = (props) => {
 
     return (
         <Box sx={{ position: "relative", width: "100%", overflow: "hidden" }}>
-            {}
             <Typography
                 variant="h4"
                 sx={{
@@ -55,7 +54,6 @@ const Slider = (props) => {
                 Titulo
             </Typography>
 
-            {}
             {currentIndex > 0 && (
                 <IconButton
                     onClick={() => scroll("left")}
@@ -78,7 +76,6 @@ const Slider = (props) => {
                 </IconButton>
             )}
 
-            {}
             <Box
                 ref={containerRef}
                 sx={{
@@ -145,7 +142,6 @@ const Slider = (props) => {
                 ))}
             </Box>
 
-            {}
             {currentIndex < totalPages - 1 && (
                 <IconButton
                     onClick={() => scroll("right")}
@@ -167,7 +163,6 @@ const Slider = (props) => {
                 </IconButton>
             )}
 
-            {}
             <Box
                 sx={{
                     top: "90%",

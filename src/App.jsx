@@ -4,6 +4,7 @@ import FilmsPage from "./components/Films/Filmspage";
 import SeriesPage from "./components/Series/Seriespage";
 import Footer from "./components/Footer/Footer";
 import './components/stylespage.css';
+import "./app.css"
 import { HomePage } from "./components/HomePage/HomePage";
 
 function App() {

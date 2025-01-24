@@ -24,9 +24,10 @@ const Navbar = () => {
   );
 };
 
+
 const styles = {
   navbar: {
-    position: "fixed", 
+    position: "fixed",
     top: 0,
     left: 0,
     width: "100%", 
@@ -40,11 +41,13 @@ const styles = {
    
   },
   logo: {
-    fontSize: "1.5rem",
-    fontWeight: "bold",
+ width: "13%",
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
   },
   logoImg: {
-    width: "13%",
+    width: "50%",
   },
   navLinks: {
     listStyle: "none",

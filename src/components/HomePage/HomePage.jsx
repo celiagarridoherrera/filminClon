@@ -7,6 +7,8 @@ export const HomePage = () => {
         <>
             <Slider page={1}></Slider>
             <CategoryCarousel page={1} ></CategoryCarousel>
+            <CategoryCarousel page={2} ></CategoryCarousel>
+            <CategoryCarousel page={3} ></CategoryCarousel>
         </>
     )
 

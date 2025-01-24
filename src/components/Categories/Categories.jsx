@@ -33,7 +33,6 @@ export const CategoryCarousel = ( props ) => {
       >
         titulo
         </Typography>
-      {}
       <IconButton
         onClick={() => scroll("left")}
         sx={{
@@ -56,7 +55,6 @@ export const CategoryCarousel = ( props ) => {
         }} />
       </IconButton>
 
-      {}
       <Box
         ref={containerRef}
         sx={{
@@ -65,9 +63,9 @@ export const CategoryCarousel = ( props ) => {
           scrollBehavior: "smooth",
           gap: "19px",
           padding: 2,
-          "&::-webkit-scrollbar": { display: "none" },
-          msOverflowStyle: "none",
-          scrollbarWidth: "none",
+          "&::-webkit-scrollbar": { display: "none" }, 
+          msOverflowStyle: "none", 
+          scrollbarWidth: "none", 
         }}
       >
         {results.map((item, index) => (
@@ -99,7 +97,6 @@ export const CategoryCarousel = ( props ) => {
         ))}
       </Box>
 
-      {}
       <IconButton
         onClick={() => scroll("right")}
         sx={{ 
